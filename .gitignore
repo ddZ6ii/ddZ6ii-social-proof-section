@@ -1,0 +1,50 @@
+# Avoid accidental Sketch file upload 
+###############################################
+## Please do not remove line 5 - thanks! 🙂 ##
+###############################################
+*.sketch
+
+# Avoid accidental XD or Figma upload if you convert the design file
+#######################################################
+## Please do not remove lines 11 and 12 - thanks! 🙂 ##
+#######################################################
+*.xd
+*.fig
+
+
+# Ignore all files starting with . or ~ except explicitly allowed allowed files
+.*
+~*
+!.gitignore
+!.env.example
+!.postcssrc
+!.eslintrc.*
+!.prettierrc
+!.prettierc.*
+!.prettierignore
+
+# Ignore log files
+*.log
+
+# Ignore dotenv environment variables file
+.env*
+
+# Ignore node dependency directories
+node_modules/
+
+# Ignore build directories
+dist/
+public/
+
+# Ignore design files
+design/
+screenshots/
+
+# Ignore undesired .md files
+/README-template.md
+
+# Ignore vercel folder
+.vercel/
+
+# Ignore parcel folders
+.parcel-cache/

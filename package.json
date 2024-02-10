@@ -1,0 +1,9 @@
+{
+  "name": "social-proof-section",
+  "version": "1.0.0",
+  "description": "Frontend Mentor challenge",
+  "main": "index.js",
+  "repository": "git@github.com:ddZ6ii/social-proof-section.git",
+  "author": "Denis Dezest <denis.dezest@gmail.com>",
+  "license": "MIT"
+}
