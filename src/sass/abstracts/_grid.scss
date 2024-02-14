@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// @type Length
+$grid-max-width: 1200px !default;
+
+/// @type Number
+$grid-cols-xs: 4 !default;
+$grid-cols-sm: 8 !default;
+$grid-cols-md: 12 !default;
+$grid-cols-lg: $grid-cols-md !default;
+$grid-cols-xl: $grid-cols-md !default;
+
+/// @type Length
+$grid-gutter-xs: 16px !default;
+$grid-gutter-sm: 24px !default;
+$grid-gutter-md: $grid-gutter-sm !default;
+$grid-gutter-lg: $grid-gutter-sm !default;
+$grid-gutter-xl: $grid-gutter-sm !default;
+
+/// @type Length
+$grid-margin-xs: 16px !default;
+$grid-margin-sm: 32px !default;
+$grid-margin-md: 64px !default;
+$grid-margin-lg: 120px !default;
+$grid-margin-xl: auto !default;
+
+/// Grid column layout (map)
+/// @prop {String} keys - Screen size label
+/// @prop {Map} values - Map of grid layout configuration at given screen size
+$grid-layout: (
+  'xs': (
+    'margin': $grid-margin-xs,
+    'cols': $grid-cols-xs,
+    'gutter': $grid-gutter-xs,
+  ),
+  'sm': (
+    'margin': $grid-margin-sm,
+    'cols': $grid-cols-sm,
+    'gutter': $grid-gutter-sm,
+  ),
+  'md': (
+    'margin': $grid-margin-md,
+    'cols': $grid-cols-md,
+    'gutter': $grid-gutter-md,
+  ),
+  'lg': (
+    'margin': $grid-margin-lg,
+    'cols': $grid-cols-lg,
+    'gutter': $grid-gutter-lg,
+  ),
+  'xl': (
+    'margin': $grid-margin-xl,
+    'cols': $grid-cols-xl,
+    'gutter': $grid-gutter-xl,
+  ),
+) !default;

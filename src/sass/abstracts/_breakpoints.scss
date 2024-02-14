@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+// System derived from Material Design reponsive layout grid:
+//  xs: 0px <= phone < 640px with 4 columns grid layout, fluid body and 16px fixed margins
+//  sm: 640px <= tablet < 905px with 8 columns grid layout, fluid body and 32px fixed margins
+//  md: 905px <= tablet < 1240px with 12 columns grid layout, fluid body and 64px fixed margins
+//  lg: 1240px <= laptop < 1440px with 12 columns grid layout, fluid body and 120px fixed margins
+//  xl: >= 1440px with 12 columns grid layout, fixed body's max-width 1200px and fluid margins
+// -----------------------------------------------------------------------------
+
+/// @type Length
+$screen-xs: 0px !default;
+$screen-sm: 640px !default;
+$screen-md: 905px !default;
+$screen-lg: 1240px !default;
+$screen-xl: 1440px !default;
+
+/// @prop {String} keys - Screen size labels
+/// @prop {Map} values - Screen sizes in pixels
+$breakpoints: (
+  'xs': $screen-xs,
+  'sm': $screen-sm,
+  'md': $screen-md,
+  'lg': $screen-lg,
+  'xl': $screen-xl,
+) !default;

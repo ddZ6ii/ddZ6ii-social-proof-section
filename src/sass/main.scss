@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file gathers all Sass partials into a single file
+// The order of import matters!
+// Different files might depend on code previously created in other files!
+// -----------------------------------------------------------------------------
+
+@charset 'utf-8';
+
+@use 'abstracts' as a;

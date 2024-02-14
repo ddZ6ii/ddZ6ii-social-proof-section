@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/// @type List
+$font-body: 'League Spartan', sans-serif !default;
+$font-headings: $font-body !default;
+$font-display: $font-body !default;
+
+/// @type Number
+$font-bold: 700 !default;
+$font-medium: 600 !default;
+$font-regular: 400 !default;
+
+/// @type Length
+$font-body-sm: 0.875rem !default;
+$font-body-md: 1rem !default;
+$font-body-lg: 1.125rem !default;
+$font-heading-sm: 2.5rem !default;
+$font-heading-md: 3.75rem !default;

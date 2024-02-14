@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file gathers all application-wide Sass partials from the abstracts folder
+// and make them available to the main.scss file.
+// The order of import matters!
+// Different files might depend on code previously created in other files!
+// -----------------------------------------------------------------------------
+
+@forward './breakpoints';
+@forward './colors';
+@forward './grid';
+@forward './spacing';
+@forward './typography';
+@forward './mixins';
+@forward './placeholders';
