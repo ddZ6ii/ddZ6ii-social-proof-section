@@ -1,0 +1,9 @@
+{
+  "plugins": {
+    "postcss-uncss": {
+      "html": [
+        "./src/index.html"
+      ]
+    }
+  }
+}

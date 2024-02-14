@@ -2,8 +2,23 @@
   "name": "social-proof-section",
   "version": "1.0.0",
   "description": "Frontend Mentor challenge",
-  "main": "index.js",
   "repository": "git@github.com:ddZ6ii/social-proof-section.git",
   "author": "Denis Dezest <denis.dezest@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "source": "src/index.html",
+  "scripts": {
+    "debug": "sass src/sass/main.scss src/css/style.css",
+    "dev": "parcel --open chrome",
+    "build": "parcel build --dist-dir public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.11.0",
+    "parcel": "^2.11.0",
+    "postcss": "^8.4.35",
+    "postcss-modules": "^6.0.0",
+    "postcss-uncss": "^0.17.0",
+    "sass": "^1.70.0",
+    "uncss": "^0.17.3"
+  }
 }
