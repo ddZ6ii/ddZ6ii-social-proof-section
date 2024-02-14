@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set the rem ref relative to browser settings.
+ */
+html {
+  font-size: 1em;
+}
+
+body {
+  min-height: 100dvh;
+}

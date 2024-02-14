@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// This file gathers all Sass partials from the base folder and make them
+// available to the main.scss file.
+// The order of import matters!
+// Different files might depend on code previously created in other files!
+// -----------------------------------------------------------------------------
+
+@forward './reset';
+@forward './base';
