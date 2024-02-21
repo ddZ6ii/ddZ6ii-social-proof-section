@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the grid system of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts/breakpoints' as b;
+@use '../abstracts/grid' as g;
+@use '../abstracts/spacing' as s;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/placeholders';
+
+.grid {
+  padding: s.$grid-padding;
+  max-width: g.$grid-max-width;
+  display: grid;
+  row-gap: s.$grid-vertical-flow;
+  @extend %responsive-grid;
+
+  &__item {
+    grid-column: -1 / 1;
+    @include m.screen-min('md') {
+      &--hero {
+        grid-column: span 5;
+      }
+      &--ratings {
+        grid-column: span 7;
+      }
+    }
+
+    // TODO: to be removed...
+    &--hero {
+      background-color: lightblue;
+    }
+    &--ratings {
+      background-color: lightcoral;
+      align-self: center;
+    }
+    &--testimonials {
+      background-color: lightgreen;
+    }
+  }
+}

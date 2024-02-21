@@ -1,12 +1,8 @@
 // -----------------------------------------------------------------------------
-// This file gathers all Sass partials into a single file
+// This file gathers all Sass partials from the layout folder and make them
+// available to the main.scss file.
 // The order of import matters!
 // Different files might depend on code previously created in other files!
 // -----------------------------------------------------------------------------
 
-@charset 'utf-8';
-
-//When importing a folder without a specified file, Sass will search by default for the _index.scss within that folder
-@use 'abstracts';
-@use 'base';
-@use 'layout';
+@forward './grid';

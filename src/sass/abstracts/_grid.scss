@@ -2,6 +2,9 @@
 // This file contains application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
+// -----------------------------------------------------------------------------
+// 12–8–4 Column System for responsive design
+// -----------------------------------------------------------------------------
 /// @type Length
 $grid-max-width: 1200px !default;
 
@@ -29,7 +32,7 @@ $grid-margin-xl: auto !default;
 /// Grid column layout (map)
 /// @prop {String} keys - Screen size label
 /// @prop {Map} values - Map of grid layout configuration at given screen size
-$grid-layout: (
+$grid: (
   'xs': (
     'margin': $grid-margin-xs,
     'cols': $grid-cols-xs,

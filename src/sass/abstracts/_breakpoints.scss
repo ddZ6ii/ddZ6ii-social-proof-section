@@ -11,12 +11,19 @@
 //  xl: >= 1440px with 12 columns grid layout, fixed body's max-width 1200px and fluid margins
 // -----------------------------------------------------------------------------
 
+// -----------------------------------------------------------------------------
+// Prefer using relative em unit instead of absolute px unit for media queries:
+//  em is the only unit that performs consistently across all browsers
+//  em is the only unit that allows to support users who change their browser’s font-size value
+//  Source: https://zellwk.com/blog/media-query-units/
+// -----------------------------------------------------------------------------
+
 /// @type Length
-$screen-xs: 0px !default;
-$screen-sm: 640px !default;
-$screen-md: 905px !default;
-$screen-lg: 1240px !default;
-$screen-xl: 1440px !default;
+$screen-xs: 0em !default;
+$screen-sm: 40em !default; // 640px
+$screen-md: 56.5625em !default; // 905px
+$screen-lg: 77.5em !default; // 1240px
+$screen-xl: 90em !default; // 1440px
 
 /// @prop {String} keys - Screen size labels
 /// @prop {Map} values - Screen sizes in pixels

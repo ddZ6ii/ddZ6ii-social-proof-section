@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// This file contains application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@use './breakpoints' as b;
+@use './grid' as g;
+
+/// Breakpoint manager
+/// from...
+/// @param {String} $_keymin - Breakpoint keyword for screen min-width
+/// @requires $breakpoints - Breakpoint map
+@mixin screen-min($_keymin) {
+  @if map-has-key(b.$breakpoints, $_keymin) {
+    $_min-width: map-get(b.$breakpoints, $_keymin);
+    @media only screen and (min-width: $_min-width) {
+      @content;
+    }
+  } @else {
+    @error 'the keyword #{$_keymin} is not in the $breakpoints map';
+  }
+}
+
+/// to...
+/// @param {String} $_keymax - Breakpoint keyword for screen max-width
+/// @requires $breakpoints - Breakpoint map
+@mixin screen-max($_keymax) {
+  @if map-has-key(b.$breakpoints, $_keymax) {
+    $_max-width: calc(map-get(b.$breakpoints, $_keymax) - 1px);
+    @media only screen and (max-width: $_max-width) {
+      @content;
+    }
+  } @else {
+    @error 'the keyword #{$_keymax} is not in the $breakpoints map';
+  }
+}
+
+/// from... to...
+/// @param {String} $_keymin - Breakpoint keyword for screen min-width
+/// @param {String} $_keymax - Breakpoint keyword for screen max-width
+/// @requires $breakpoints - Breakpoint map
+@mixin screen-between($_keymin, $_keymax) {
+  @if not map-has-key(b.$breakpoints, $_keymin) {
+    @error 'the keyword #{ $_keymin} is not in the $breakpoints map';
+  }
+  @if not map-has-key(b.$breakpoints, $_keymax) {
+    @error 'the keyword #{ $_keymax} is not in the $breakpoints map';
+  }
+
+  $_min-width: map-get(b.$breakpoints, $_keymin);
+  $_max-width: calc(map-get(b.$breakpoints, $_keymax) - 1px);
+  @media only screen and (min-width: $_min-width) and (max-width: $_max-width) {
+    @content;
+  }
+}
+
+/// Responsive grid layout manager
+/// @param {String} $_keymin - Breakpoint keyword for screen min-width
+@mixin grid-layout($_keymin) {
+  @if map-has-key(g.$grid, $_keymin) {
+    $_map: map-get(g.$grid, $_keymin);
+    $_margin: map-get($_map, 'margin');
+    $_cols: map-get($_map, 'cols');
+    $_gutter: map-get($_map, 'gutter');
+
+    margin-inline: $_margin;
+    grid-template-columns: repeat($_cols, 1fr);
+    column-gap: $_gutter;
+  } @else {
+    @error 'the keyword #{$_keymin} is not in the $grid map';
+  }
+}

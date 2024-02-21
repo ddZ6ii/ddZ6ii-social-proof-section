@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains application-wide Sass placeholders.
+// -----------------------------------------------------------------------------
+
+@use 'breakpoints' as b;
+@use 'mixins' as m;
+
+/// Responsive grid layout
+%responsive-grid {
+  @each $_key, $_val in b.$breakpoints {
+    @include m.screen-min($_key) {
+      @include m.grid-layout($_key);
+    }
+  }
+}
