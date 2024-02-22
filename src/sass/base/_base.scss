@@ -2,6 +2,8 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+@use '../abstracts/typography' as t;
+
 /**
  * Set the rem ref relative to browser settings.
  */
@@ -11,4 +13,6 @@ html {
 
 body {
   min-height: 100dvh;
+  font-family: t.$font-body;
+  font-weight: t.$font-medium;
 }

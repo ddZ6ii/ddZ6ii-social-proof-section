@@ -1,0 +1,24 @@
+@use '../abstracts/spacing' as s;
+@use '../abstracts/mixins' as m;
+
+.hero {
+  &__title {
+    max-width: 320px;
+    margin-bottom: 8 * s.$spacing-base;
+
+    @include m.screen-min('sm') {
+      max-width: 400px;
+    }
+    @include m.screen-max('sm') {
+      margin-inline: auto;
+    }
+  }
+  &__description {
+    @include m.screen-min('sm') {
+      max-width: 440px;
+    }
+  }
+  @include m.screen-max('sm') {
+    text-align: center;
+  }
+}

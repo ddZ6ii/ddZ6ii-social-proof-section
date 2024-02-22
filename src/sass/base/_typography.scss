@@ -1,0 +1,30 @@
+@use '../abstracts/typography' as t;
+@use '../abstracts/colors' as c;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/placeholders' as p;
+
+%paragraph {
+  font-size: t.$font-body-lg;
+  font-weight: t.$font-medium;
+  line-height: 1.33;
+}
+
+h1 {
+  font-size: t.$font-heading-xs;
+  font-weight: t.$font-bold;
+  letter-spacing: -1px;
+  line-height: 0.8;
+  color: c.$color-primary;
+  @include m.screen-min('sm') {
+    font-size: t.$font-heading-sm;
+  }
+}
+
+p {
+  @extend %paragraph;
+
+  &.hero__description {
+    letter-spacing: -1px;
+    color: c.$color-primary-dark;
+  }
+}
