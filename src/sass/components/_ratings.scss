@@ -1,0 +1,46 @@
+@use '../abstracts/border-radius' as br;
+@use '../abstracts/colors' as c;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/spacing' as s;
+
+.ratings {
+  $rating-gap: 4 * s.$spacing-base;
+
+  &__items {
+    @include m.flex-center(column, $rating-gap);
+    @include m.screen-min('sm') {
+      margin-left: auto;
+      width: min(100%, 536px);
+    }
+  }
+
+  &__item {
+    $rating-item-padding-vr: 4 * s.$spacing-base;
+    $rating-item-padding-hr: 6 * s.$spacing-base;
+
+    padding: $rating-item-padding-vr $rating-item-padding-hr;
+    width: min(100%, 440px);
+    @include m.flex-center(column, $rating-gap);
+
+    background-color: c.$color-primary-light;
+    border-radius: br.$border-radius-base;
+
+    @include m.screen-min('sm') {
+      flex-direction: row;
+      align-items: flex-start;
+      &:nth-of-type(1) {
+        align-self: flex-start;
+      }
+      &:nth-of-type(2) {
+        align-self: center;
+      }
+      &:nth-of-type(3) {
+        align-self: flex-end;
+      }
+    }
+
+    &__img-container {
+      @include m.flex-center($_gap: s.$spacing-base);
+    }
+  }
+}
