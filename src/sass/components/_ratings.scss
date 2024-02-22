@@ -4,10 +4,11 @@
 @use '../abstracts/spacing' as s;
 
 .ratings {
-  $rating-gap: 4 * s.$spacing-base;
+  $card-gap: 4 * s.$spacing-base;
+  align-self: center;
 
   &__items {
-    @include m.flex-center(column, $rating-gap);
+    @include m.flex-center(column, $card-gap);
     @include m.screen-min('sm') {
       margin-left: auto;
       width: min(100%, 536px);
@@ -15,12 +16,12 @@
   }
 
   &__item {
-    $rating-item-padding-vr: 4 * s.$spacing-base;
-    $rating-item-padding-hr: 6 * s.$spacing-base;
+    $padding-vr: 4 * s.$spacing-base;
+    $padding-hr: 6 * s.$spacing-base;
 
-    padding: $rating-item-padding-vr $rating-item-padding-hr;
+    padding: $padding-vr $padding-hr;
     width: min(100%, 440px);
-    @include m.flex-center(column, $rating-gap);
+    @include m.flex-center(column, $card-gap);
 
     background-color: c.$color-primary-light;
     border-radius: br.$border-radius-base;

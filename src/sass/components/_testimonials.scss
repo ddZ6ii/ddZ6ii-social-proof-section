@@ -1,0 +1,68 @@
+@use '../abstracts/border-radius' as br;
+@use '../abstracts/colors' as c;
+@use '../abstracts/mixins' as m;
+@use '../abstracts/spacing' as s;
+
+.testimonials {
+  $card-gap: 4 * s.$spacing-base;
+
+  &__items {
+    @include m.flex(column, $card-gap);
+    align-items: center;
+    @include m.screen-min('sm') {
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+    @include m.screen-min('lg') {
+      min-height: 264px;
+    }
+  }
+
+  &__item {
+    $padding-vr: 10 * s.$spacing-base;
+    $padding-hr: 8 * s.$spacing-base;
+
+    padding: $padding-vr $padding-hr;
+    max-width: 440px;
+
+    background-color: c.$color-primary;
+    border-radius: br.$border-radius-base;
+
+    color: c.$color-neutral-50;
+
+    @include m.screen-min('sm') {
+      flex: 1 1 280px;
+    }
+    @include m.screen-min('lg') {
+      &:nth-child(1) {
+        align-self: flex-start;
+      }
+      &:nth-child(2) {
+        align-self: center;
+      }
+      &:nth-child(3) {
+        align-self: flex-end;
+      }
+    }
+  }
+}
+
+.testimonial {
+  $gap: 6 * s.$spacing-base;
+
+  &__header {
+    margin-bottom: $gap;
+    @include m.flex($_gap: $gap);
+    align-items: center;
+
+    &__user-info {
+      flex-grow: 1;
+      @include m.flex(column);
+    }
+
+    .user-avatar {
+      border-radius: 50%;
+    }
+  }
+}

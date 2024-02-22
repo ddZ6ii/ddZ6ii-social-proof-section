@@ -13,6 +13,8 @@ html {
 
 body {
   min-height: 100dvh;
+  display: grid;
+  place-content: center;
   font-family: t.$font-body;
   font-weight: t.$font-medium;
 }

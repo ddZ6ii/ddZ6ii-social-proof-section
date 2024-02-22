@@ -15,13 +15,12 @@
       type="image/png"
       sizes="32x32"
       href="./assets/favicon-32x32.png" />
-    <!-- <link rel="stylesheet" href="sass/main.scss" /> -->
-    <link rel="stylesheet" href="/dist//css/main.css" />
+    <link rel="stylesheet" href="sass/main.scss" />
     <title>Frontend Mentor | Social proof section</title>
   </head>
   <body>
     <div class="grid">
-      <header class="grid__item grid__item--hero hero">
+      <header class="grid__item grid__item__hero hero">
         <h1 class="hero__title">10,000+ of our users love our products.</h1>
         <p class="hero__description">
           We only provide great products combined with excellent customer
@@ -29,7 +28,8 @@
           services.
         </p>
       </header>
-      <section class="grid__item grid__item--ratings ratings">
+
+      <section class="grid__item grid__item__ratings ratings">
         <ul class="ratings__items">
           <li class="ratings__item">
             <div class="ratings__item__img-container">
@@ -138,24 +138,83 @@
           </li>
         </ul>
       </section>
-      <section class="grid__item grid__item--testimonials">
-        Testimonials
-      </section>
-    </div>
-    <!--    Colton Smith Verified Buyer "We needed
-    the same printed design as the one we had ordered a week prior. Not only did
-    they find the original order, but we also received it in time. Excellent!"
-    Irene Roberts Verified Buyer "Customer service is always excellent and very
-    quick turn around. Completely delighted with the simplicity of the purchase
-    and the speed of delivery." Anne Wallace Verified Buyer "Put an order with
-    this company and can only praise them for the very high standard. Will
-    definitely use them again and recommend them to everyone!"
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded with ❤️ by <a href="#">Your Name Here</a>.
-    </div> -->
+      <section class="grid__item grid__item__testimonials testimonials">
+        <ul class="testimonials__items">
+          <li class="testimonials__item">
+            <div class="testimonial__header">
+              <img
+                src="assets/img/image-colton.jpg"
+                alt="user avatar"
+                width="40"
+                height="40"
+                class="user-avatar" />
+              <div class="testimonial__header__user-info">
+                <p class="user-name">Colton Smith</p>
+                <p class="user-status">Verified Buyer</p>
+              </div>
+            </div>
+            <blockquote class="testimonial__content">
+              <p class="user-testimonial">
+                "We needed the same printed design as the one we had ordered a
+                week prior. Not only did they find the original order, but we
+                also received it in time. Excellent!"
+              </p>
+            </blockquote>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonial__header">
+              <img
+                src="assets/img/image-irene.jpg"
+                alt="user avatar"
+                width="40"
+                height="40"
+                class="user-avatar" />
+              <div class="testimonial__header__user-info">
+                <p class="user-name">Irene Roberts</p>
+                <p class="user-status">Verified Buyer</p>
+              </div>
+            </div>
+            <blockquote class="testimonial__content">
+              <p class="user-testimonial">
+                "Customer service is always excellent and very quick turn
+                around. Completely delighted with the simplicity of the purchase
+                and the speed of delivery."
+              </p>
+            </blockquote>
+          </li>
+          <li class="testimonials__item">
+            <div class="testimonial__header">
+              <img
+                src="assets/img/image-anne.jpg"
+                alt="user avatar"
+                width="40"
+                height="40"
+                class="user-avatar" />
+              <div class="testimonial__header__user-info">
+                <p class="user-name">Anne Wallace</p>
+                <p class="user-status">Verified Buyer</p>
+              </div>
+            </div>
+            <blockquote class="testimonial__content">
+              <p class="user-testimonial">
+                "Put an order with this company and can only praise them for the
+                very high standard. Will definitely use them again and recommend
+                them to everyone!"
+              </p>
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="grid__item grid__item__footer">
+        <p class="footer">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded with ❤️ by <a href="https://github.com/ddZ6ii">ddZ6ii</a>.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
