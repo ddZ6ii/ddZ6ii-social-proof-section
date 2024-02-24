@@ -29,7 +29,10 @@
         </p>
       </header>
 
-      <section class="grid__item grid__item__ratings ratings">
+      <!-- Accessibility method 1: aria-label attribute, no heading -->
+      <section
+        aria-label="rating"
+        class="grid__item grid__item__ratings ratings">
         <ul class="ratings__items">
           <li class="ratings__item">
             <div class="ratings__item__img-container">
@@ -37,31 +40,31 @@
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
             </div>
             <p class="rating__description">Rated 5 Stars in Reviews</p>
@@ -72,31 +75,31 @@
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
             </div>
             <p class="rating__description">Rated 5 Stars in Report Guru</p>
@@ -107,31 +110,31 @@
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
               <img
                 src="assets/img/icon-star.svg"
                 width="20"
                 height="20"
-                alt="star rating"
+                alt=""
                 class="rating__img" />
             </div>
             <p class="rating__description">Rated 5 Stars in BestTech</p>
@@ -139,70 +142,85 @@
         </ul>
       </section>
 
-      <section class="grid__item grid__item__testimonials testimonials">
+      <!-- Accessibility method 2: aria-labelledby attribute, heading with hidden attribute -->
+      <section
+        aria-labelledby="testimonials-heading"
+        class="grid__item grid__item__testimonials testimonials">
+        <h2 id="testimonials-heading" hidden>Testimonials</h2>
         <ul class="testimonials__items">
           <li class="testimonials__item">
-            <div class="testimonial__header">
-              <img
-                src="assets/img/image-colton.jpg"
-                alt="user avatar"
-                width="40"
-                height="40"
-                class="user-avatar" />
-              <div class="testimonial__header__user-info">
-                <p class="user-name">Colton Smith</p>
-                <p class="user-status">Verified Buyer</p>
-              </div>
-            </div>
-            <blockquote class="testimonial__content">
-              <p class="user-testimonial">
-                "We needed the same printed design as the one we had ordered a
-                week prior. Not only did they find the original order, but we
-                also received it in time. Excellent!"
-              </p>
-            </blockquote>
+            <article>
+              <header class="testimonial__header">
+                <!-- Headings should always come first. Use CSS to change the order to match the design -->
+                <div class="testimonial__header__user-info">
+                  <h2 class="user-name">Colton Smith</h2>
+                  <p class="user-status">Verified Buyer</p>
+                </div>
+                <img
+                  src="assets/img/image-colton.jpg"
+                  alt=""
+                  width="40"
+                  height="40"
+                  class="user-avatar" />
+              </header>
+              <blockquote class="testimonial__content">
+                <p class="user-testimonial">
+                  "We needed the same printed design as the one we had ordered a
+                  week prior. Not only did they find the original order, but we
+                  also received it in time. Excellent!"
+                </p>
+              </blockquote>
+            </article>
           </li>
+
           <li class="testimonials__item">
-            <div class="testimonial__header">
-              <img
-                src="assets/img/image-irene.jpg"
-                alt="user avatar"
-                width="40"
-                height="40"
-                class="user-avatar" />
-              <div class="testimonial__header__user-info">
-                <p class="user-name">Irene Roberts</p>
-                <p class="user-status">Verified Buyer</p>
-              </div>
-            </div>
-            <blockquote class="testimonial__content">
-              <p class="user-testimonial">
-                "Customer service is always excellent and very quick turn
-                around. Completely delighted with the simplicity of the purchase
-                and the speed of delivery."
-              </p>
-            </blockquote>
+            <article>
+              <header class="testimonial__header">
+                <!-- Headings should always come first. Use CSS to change the order to match the design -->
+                <div class="testimonial__header__user-info">
+                  <h2 class="user-name">Irene Roberts</h2>
+                  <p class="user-status">Verified Buyer</p>
+                </div>
+                <img
+                  src="assets/img/image-irene.jpg"
+                  alt=""
+                  width="40"
+                  height="40"
+                  class="user-avatar" />
+              </header>
+              <blockquote class="testimonial__content">
+                <p class="user-testimonial">
+                  "Customer service is always excellent and very quick turn
+                  around. Completely delighted with the simplicity of the
+                  purchase and the speed of delivery."
+                </p>
+              </blockquote>
+            </article>
           </li>
+
           <li class="testimonials__item">
-            <div class="testimonial__header">
-              <img
-                src="assets/img/image-anne.jpg"
-                alt="user avatar"
-                width="40"
-                height="40"
-                class="user-avatar" />
-              <div class="testimonial__header__user-info">
-                <p class="user-name">Anne Wallace</p>
-                <p class="user-status">Verified Buyer</p>
-              </div>
-            </div>
-            <blockquote class="testimonial__content">
-              <p class="user-testimonial">
-                "Put an order with this company and can only praise them for the
-                very high standard. Will definitely use them again and recommend
-                them to everyone!"
-              </p>
-            </blockquote>
+            <article>
+              <header class="testimonial__header">
+                <!-- Headings should always come first. Use CSS to change the order to match the design -->
+                <div class="testimonial__header__user-info">
+                  <h2 class="user-name">Anne Wallace</h2>
+                  <p class="user-status">Verified Buyer</p>
+                </div>
+                <img
+                  src="assets/img/image-anne.jpg"
+                  alt=""
+                  width="40"
+                  height="40"
+                  class="user-avatar" />
+              </header>
+              <blockquote class="testimonial__content">
+                <p class="user-testimonial">
+                  "Put an order with this company and can only praise them for
+                  the very high standard. Will definitely use them again and
+                  recommend them to everyone!"
+                </p>
+              </blockquote>
+            </article>
           </li>
         </ul>
       </section>
@@ -210,9 +228,18 @@
       <footer class="grid__item grid__item__footer">
         <p class="footer">
           Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            title="Visit the website"
+            class="footer__link"
             >Frontend Mentor</a
-          >. Coded with ❤️ by <a href="https://github.com/ddZ6ii">ddZ6ii</a>.
+          >. Coded with <span>❤</span> by
+          <a
+            href="https://github.com/ddZ6ii"
+            title="Visit Github profile"
+            class="footer__link"
+            >ddZ6ii</a
+          >.
         </p>
       </footer>
     </div>

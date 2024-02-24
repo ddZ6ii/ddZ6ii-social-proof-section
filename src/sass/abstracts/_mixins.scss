@@ -74,8 +74,18 @@
 /// @param {String} $_direction ['row'] - Flex direction
 /// @param {String} $_gap [4px] - Flex gap
 @mixin flex($_direction: row, $_gap: 0) {
-  @if not($_direction == row or $_direction == column) {
-    @error 'flex-direction #{$_direction} must either be \'row\' or \'column\'';
+  @if not(
+    $_direction ==
+      row or
+      $_direction ==
+      row-reverse or
+      $_direction ==
+      column or
+      $_direction ==
+      column-reverse
+  )
+  {
+    @error 'flex-direction #{$_direction} must one of the following: \'row\', \'row-reverse\', \'column\' or \'column-reverse\'';
   }
   display: flex;
   flex-direction: $_direction;

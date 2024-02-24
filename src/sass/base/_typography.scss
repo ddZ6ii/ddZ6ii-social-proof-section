@@ -20,6 +20,12 @@ h1 {
   }
 }
 
+h2,
+h3 {
+  @extend %paragraph;
+  font-weight: t.$font-bold;
+}
+
 p {
   @extend %paragraph;
 
@@ -32,10 +38,6 @@ p {
     color: c.$color-primary;
     font-weight: t.$font-bold;
     letter-spacing: 0px;
-  }
-
-  &.user-name {
-    font-weight: t.$font-bold;
   }
 
   &.user-status {
@@ -60,5 +62,5 @@ p {
 }
 
 a {
-  color: c.$color-accent;
+  color: c.$color-accent-dark;
 }

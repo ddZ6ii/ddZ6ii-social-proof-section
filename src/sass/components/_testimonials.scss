@@ -53,7 +53,7 @@
 
   &__header {
     margin-bottom: $gap;
-    @include m.flex($_gap: $gap);
+    @include m.flex(row-reverse, $gap);
     align-items: center;
 
     &__user-info {

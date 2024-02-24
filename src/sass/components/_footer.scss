@@ -1,3 +1,39 @@
+@use '../abstracts/colors' as c;
+
+%link {
+  color: c.$color-complementary;
+  text-underline-offset: 0.2em;
+}
+
 .footer {
   text-align: center;
+
+  span {
+    color: crimson;
+  }
+
+  /* The order of styling rules for links matters */
+  &__link {
+    @extend %link;
+
+    &:link {
+      @extend %link;
+    }
+    &:visited {
+      color: c.$color-complementary;
+    }
+    &:focus-visible {
+      outline-color: c.$color-primary;
+      outline-offset: 0.1em;
+      text-decoration: none;
+    }
+    &:hover {
+      font-weight: bold;
+      text-decoration-thickness: 2px;
+    }
+    &:active {
+      color: c.$color-accent-dark;
+      text-decoration: none;
+    }
+  }
 }
